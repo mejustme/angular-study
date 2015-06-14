@@ -10,7 +10,7 @@ function routeConfig($routeProvider) {
             templateUrl: 'goods-list.html',
             controller: 'ListsController'
         }).
-        when('/content/:id', {
+        when('/content/:id', {  //害苦了我，:id写上面去了
             templateUrl: 'goods-content.html',
             controller: 'ContentController'
         }).
@@ -63,7 +63,7 @@ angularDemoApp.controller('ContentController', ['$scope', '$http','$routeParams'
 /*--------定义商品过滤器------*/
 angularDemoApp.filter('searchFilter', function () {
     var searchFilter = function (input, type, obj) {
-        var result = {};
+        var result = []; // 害苦我，写成{}!
         switch(type) {
 
             case 'keyword':
@@ -77,7 +77,7 @@ angularDemoApp.filter('searchFilter', function () {
                 break;
 
             case 'state':
-                if(obj.state === 'all'){
+                if(obj.state1 === 'all'){ // 害苦我，写成state!
                     result = input;
                 }else {
                     $.each(obj, function(key, value) {
