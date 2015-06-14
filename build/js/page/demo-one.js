@@ -3,6 +3,7 @@
 
 var demoApp = angular.module('demoApp', ['ngRoute']);
 
+
 /*------URL/模板/控制器-------*/
 function routeConfig($routeProvider) {
     $routeProvider.
@@ -20,7 +21,6 @@ function routeConfig($routeProvider) {
 }
 
 demoApp.config(routeConfig);
-
 
 /*-------商品列表控制器--------*/
 demoApp.controller('ListsController', ['$scope', '$http', function($scope, $http) {
@@ -45,7 +45,7 @@ demoApp.controller('ListsController', ['$scope', '$http', function($scope, $http
 
 /*-------商品内容控制器--------*/
 demoApp.controller('ContentController', ['$scope', '$http','$routeParams',
-        function($scope, $rootScope, $http, $filter, $routeParams) {
+        function($scope, $http, $routeParams) {
             $http.get('../js/json/goods-list.json').success(function(data) {
                 if(data.status === 'success'){
                      $.each(data.itemList, function(){
