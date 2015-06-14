@@ -1,17 +1,17 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 "use strict";
 
-var demoApp = angular.module('demoApp', ['ngRoute']);
+var angularDemoApp = angular.module('angularDemoApp', ['ngRoute']);
 
 
 /*------URL/模板/控制器-------*/
 function routeConfig($routeProvider) {
     $routeProvider.
-        when('/list/:id', {
+        when('/list', {
             templateUrl: 'goods-list.html',
             controller: 'ListsController'
         }).
-        when('/content', {
+        when('/content/:id', {
             templateUrl: 'goods-content.html',
             controller: 'ContentController'
         }).
@@ -20,10 +20,10 @@ function routeConfig($routeProvider) {
         })
 }
 
-demoApp.config(routeConfig);
+angularDemoApp.config(routeConfig);
 
 /*-------商品列表控制器--------*/
-demoApp.controller('ListsController', ['$scope', '$http', function($scope, $http) {
+angularDemoApp.controller('ListsController', ['$scope', '$http', function($scope, $http) {
     $scope.filter = {
         keyword : '',
         state1 : 'all',
@@ -44,7 +44,7 @@ demoApp.controller('ListsController', ['$scope', '$http', function($scope, $http
 
 
 /*-------商品内容控制器--------*/
-demoApp.controller('ContentController', ['$scope', '$http','$routeParams',
+angularDemoApp.controller('ContentController', ['$scope', '$http','$routeParams',
         function($scope, $http, $routeParams) {
             $http.get('../js/json/goods-list.json').success(function(data) {
                 if(data.status === 'success'){
@@ -62,7 +62,7 @@ demoApp.controller('ContentController', ['$scope', '$http','$routeParams',
 
 
 /*--------定义商品过滤器------*/
-demoApp.filter('searchFilter', function () {
+angularDemoApp.filter('searchFilter', function () {
     var searchFilter = function (input, type, obj) {
         var result = {};
         switch(type) {
@@ -103,7 +103,7 @@ demoApp.filter('searchFilter', function () {
 
 
 /*--------定义状态文字转换器------*/
-demoApp.filter('toChinese', function() {
+angularDemoApp.filter('toChinese', function() {
     var convert = function(input) {
         var nameHash = {
             judge : '审核中',
