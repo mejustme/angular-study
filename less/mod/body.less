@@ -1,0 +1,127 @@
+.main-wrapper {
+  background: #f0f0f0;
+  padding: 20px 0;
+  min-width: 1200px;
+}
+.main-inner {
+  &>article {
+    float: left;
+  }
+  .nav-wrapper {
+    float: left;
+    width: 190px;
+    margin-right: 20px;
+    font-size: 16px;
+    //全局导航
+    nav {
+      width: 190px;
+      margin-right: 20px;
+      font-size: 16px;
+      a {
+        display: block;
+        color: #666;
+        &:hover {
+          text-decoration: none;
+          color: @primary;
+
+        }
+      }
+      li.clearfix, li.child-nav a {
+        color: #666;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 14px 0 20px;
+        &:hover {
+          &, & .sui-icon, & .wsif {
+            color: @primary;
+          }
+        }
+      }
+      li.clearfix {
+        cursor: pointer;
+        .sui-icon, .wsif {
+          color: #ccc;
+          margin-right: 8px;
+          font-size: 20px;
+        }
+        .wsif.wsif-new {
+          font-size: 26px;
+          line-height: 1;
+          color: @primary;
+          margin-right: 0;
+        }
+        &:hover {
+          color: @primary;
+        }
+        .icon-chevron-sign-down, .icon-chevron-sign-up{
+          float: right;
+        }
+        .wsif-signdown, .wsif-signup{
+          float: right;
+        }
+
+      }
+      li.child-nav {
+        a {
+          padding-left: 46px;
+          height: 50px;
+          line-height: 50px;
+        }
+      }
+      li.cur,li a.cur{
+        background: #e6e6e6;
+        color: #333;
+        padding-right: 10px;
+        border-right: 4px solid @primary;
+        .sui-icon, .wsif {
+          color: @primary;
+        }
+        a {
+          color: #333;
+        }
+      }
+    }
+  }
+  &>article {
+    width: 990px;
+  }
+  .block-title {
+    color: #666;
+    font-size: 20px;
+    padding: 0 5px;
+    line-height: 80px;
+    height: 80px;
+    font-weight: normal;
+    border-bottom: solid 1px #e5e5e5;
+    margin-top: 0;
+    margin-bottom: 29px;
+    &.no-border {
+      border-bottom: none;
+      margin-bottom: 5px;
+    }
+
+  }
+  .main-iframe {
+    width: 100%;
+    height: 720px;
+    margin: 0;
+  }
+}
+
+.main-wrapper.wrapper-without-sidebar {
+    min-width: 970px;
+    width: 970px;
+    padding-top: 0px;
+    background: #FFF;
+    overflow-x: hidden;
+    .main-inner {
+        width: 970px;
+        margin: 0px;
+    }
+}
+.wsif.wsif-new {
+  font-size: 26px;
+  line-height: 1;
+  color: @primary;
+}
+

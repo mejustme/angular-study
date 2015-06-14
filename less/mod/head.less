@@ -1,0 +1,107 @@
+@headHeight: 108px;
+.head {
+  height: @headHeight;
+  position: relative;
+  .logo {
+    display: inline-block;
+    height: @headHeight;
+    width: 350px;
+    background-repeat: no-repeat;
+    margin: 0;
+  }
+
+  .userbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 15px;
+    font-size: 14px;
+    li {
+      width: @headHeight;
+      height: 55px;
+      line-height: 55px;
+      margin-top: 30px;
+      float: left;
+      text-align: center;
+      font-size: 16px;
+      a {
+        color: #666;
+        text-decoration: none;
+      }
+    }
+    .userinfo {
+      width: auto;
+      a {
+        display: inline-block;
+      }
+    }
+    .userhead {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+    }
+    .username {
+      margin-left: 6px;
+    }
+    .usermsg {
+      a {
+        position: relative;
+        display: inline-block;
+      }
+      .sui-icon {
+        font-size: 32px;
+        vertical-align: middle;
+      }
+      .unread-msg {
+        position: absolute;
+        top: 11px;
+        right: -2px;
+        width: 12px;
+        height: 12px;
+        background: @primary;
+        border-radius: 6px;
+      }
+    }
+    .logout {
+      border-left: 1px solid #e0e0e0;
+    }
+    .icon-touch-email2-sign {
+      margin: 0 7px;
+      font-weight: bold;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+    #J_logout {
+      margin: 0 7px;
+    }
+  }
+  .back-to-old {
+    position: absolute;
+    right: 23px;
+    top: 10px;
+    color: #999;
+  }
+  #J_msg {
+    width: 160px;
+    border: 1px solid #dedede;
+    background: #fff;
+    padding: 7px 12px;
+    position: absolute;
+    right: @headHeight;
+    top: 95px;
+    z-index: 9;
+    li {
+      height: 20px;
+      line-height: 20px;
+      a {
+        color: @primary;
+      }
+    }
+    .icon-pc-error {
+      float: right;
+      cursor: pointer;
+      line-height: 18px;
+    }
+  }
+}
+

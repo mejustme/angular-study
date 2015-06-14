@@ -1,0 +1,64 @@
+//在屏幕左侧fixed定位的操作按钮区域
+ul.fixed-ope {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  margin-top: -80px;
+  &>li {
+    background: #fff;
+    border-radius: 1px;
+    color: #666;
+    width: 50px;
+    height: 50px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    &>a {
+      color: #666;
+      display: block;
+      height: 100%;
+      text-decoration: none;
+      &:hover {
+        color: @primaryHover;
+        .sui-icon, .wsif {
+          color: @primaryHover;
+        }
+      }
+    }
+    &#J_top {
+      display: none;
+    }
+    &#J_qrcode {
+      cursor: default;
+    }
+    .sui-icon, .wsif {
+      color: #999;
+    }
+    .icon-qrcode {
+      line-height: 50px;
+      font-size: 48px;
+    }
+    
+    &.feedback {
+      a {
+        text-decoration: none;
+        display: block;
+        height: 100%;
+      }
+    }
+    
+    .sui-tooltip, .tooltip {
+      font-size: 14px;
+      z-index: 10003;
+      border-width: 1px;
+      .tooltip-arrow {
+        border-width: 4px 0 6px 6px;
+        .cover {
+          border-width: 5px;
+        }
+      }
+    }
+  }
+}

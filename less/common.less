@@ -1,0 +1,45 @@
+// 通用Less模块主入口
+@primary: #f23f40;
+@primaryHover: #ff0000;
+html{
+  height: 100% !important;
+  body{
+    height: 100% !important;
+    .main-wrapper{
+      height: 78%;
+    }
+  }
+}
+.head, .main-inner, footer {
+  width: 1200px;
+  margin: 0 auto;
+}
+header {
+  background: #fff;
+}
+.loading {
+  display: block;
+  margin: 20px auto;
+}
+
+@import 'mod/head';
+@import 'mod/body';
+@import 'mod/foot';
+@import 'mod/fixedope';
+
+//头部logo替换
+.head{
+	.logo{
+		background-image: url(//img.alicdn.com/tps/i3/TB1LtzSHFXXXXa6XXXXqNtHZpXX-316-108.png);
+	    background-image: -webkit-image-set(url(//img.alicdn.com/tps/i3/TB1LtzSHFXXXXa6XXXXqNtHZpXX-316-108.png) 1x, url(//img.alicdn.com/tps/i1/TB1eqjQHFXXXXX3XpXXb63pWFXX-632-216.png) 2x);
+	    background-image: -moz-image-set(url(//img.alicdn.com/tps/i3/TB1LtzSHFXXXXa6XXXXqNtHZpXX-316-108.png) 1x, url(//img.alicdn.com/tps/i1/TB1eqjQHFXXXXX3XpXXb63pWFXX-632-216.png) 2x);
+	}
+}
+
+.head{
+  .userbar{
+    .userinfo{
+      margin-right: 40px;
+    }
+  }
+}
