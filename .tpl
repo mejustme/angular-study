@@ -32,9 +32,9 @@
           <div class="nav-wrapper">
               <nav class="main-block">
                   <ul class="list-unstyled" id="J_nav">
-                      <li class="clearfix "><a href="#" target="_self"><i class="wsif wsif-home"></i>首页</a></li>
+                      <li class="clearfix " ><a href="#" target="_self"><i class="wsif wsif-home"></i>首页</a></li>
                       <li class="clearfix "><a href="#" target="_self"><i class="wsif wsif-share"></i>宝贝列表</a></li>
-                      <li class="haschild clearfix "><i class="wsif wsif-form"></i>宝贝详情</li>
+                      <li class="haschild clearfix "><a href="#" target="_self"><i class="wsif wsif-form"></i>宝贝详情</a></li>
 
                   </ul>
               </nav>
@@ -70,7 +70,8 @@
 
     <script src="//g.alicdn.com/sj/lib/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="//g.alicdn.com/sui/wsui/0.0.11/js/sui.min.js" charset="utf-8"></script>
-    <script src="../js/common/common.js" charset="utf-8"></script>
+    <script src="//g.alicdn.com/sj/lib/angular/angular.min.js" charset="utf-8"></script>
+    <script src="//cdn.bootcss.com/angular.js/1.4.0-rc.2/angular-route.min.js"></script>
     <script src="../js/page/#{pagename}.js"></script>
     <!-- 下行不要套进vm -->
     <script src="//localhost:35729/livereload.js"></script>

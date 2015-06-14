@@ -1,0 +1,48 @@
+<h3 class="block-title">宝贝列表</h3>
+<div class="goods-list">
+    <div id="search">
+        <form class="form-inline">
+            <div class="form-group">
+                <label  class="keyword-input" for="key-word">宝贝名称关键词&nbsp:</label>
+                <input type="text" class="form-control" id="key-word" placeholder="Enter keyword" ng-model="filter.keyword">
+            </div>
+            <div class="form-group">
+                <label class="statue-input">宝贝状态&nbsp:</label>
+                <label class="checkbox-inline text-primary">
+                    <!--这是个坑，ng-true-value="'all'" 字符串all   ng-true-value="all" 变量all-->
+                    <input type="checkbox" ng-model="filter.state1" ng-true-value="'all'" ng-false-value="'!all'"> <span>全部</span>
+                </label>
+                <label class="checkbox-inline text-primary">
+                    <input type="checkbox" ng-model="filter.state2" ng-true-value="'judge'" ng-false-value="'!judge'"> <span>审核中</span>
+                </label>
+                <label class="checkbox-inline text-primary">
+                    <input type="checkbox" ng-model="filter.state3" ng-true-value="'sale'" ng-false-value="'!sale'"> <span>销售中</span>
+                </label>
+                <label class="checkbox-inline text-primary">
+                    <input type="checkbox" ng-model="filter.state4" ng-true-value="'off'" ng-false-value="'!off'"> <span>已下架</span>
+                </label>
+            </div>
+        </form>
+    </div>
+    <div id="goods-list" class="row">
+        <div class="goods-item col-sm-3 " ng-repeat="item in itemList | searchFilter:'keyword':filter | searchFilter:'state':filter">
+
+                <a href="#content/{{item.id}}">
+                    <img ng-src="{{item.image}}" alt="{{item.name}}">
+                </a>
+                <div class="goods-title">
+                    <a href="#content/{{item.id}}">
+                        <span>{{item.name}}</span>
+                    </a>
+                </div>
+                <div class="goods-info">
+                        <div class="price left">
+                            <span>¥</span>
+                            <strong>{{item.price | number:2}}</strong>
+                        </div>
+                        <div class="status right">{{item.state | toChinese }}</div>
+                </div>
+
+        </div>
+    </div>
+</div>

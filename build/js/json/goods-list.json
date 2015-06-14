@@ -1,0 +1,29 @@
+{
+  "status": "success",
+  "itemList": [
+    {
+      "id": "a001",
+      "name": "iphone6",
+      "price": 5123.011,
+      "state": "judge",
+      "image": "https://g-search2.alicdn.com/img/bao/uploaded/i4/i2/TB1hxH1IXXXXXXVXVXXXXXXXXXX_!!0-item_pic.jpg_80x80.jpg"
+    },{
+      "id": "a002",
+      "name": "iphone5",
+      "price": 4456,
+      "state": "sale",
+      "image": "https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/TB1O8dSHFXXXXbqXXXXXXXXXXXX_!!0-item_pic.jpg_80x80.jpg"
+  },{
+      "id": "a003",
+      "name": "三星s4",
+      "price": 2789.11111111111,
+      "state": "off",
+      "image": "https://g-search3.alicdn.com/img/bao/uploaded/i4/i2/TB1erFCHXXXXXXOXpXXXXXXXXXX_!!0-item_pic.jpg_80x80.jpg"
+  },{
+      "id": "a004",
+      "name": "s5",
+      "price": 4000.1,
+      "state": "sale",
+      "image": "https://g-search2.alicdn.com/img/bao/uploaded/i4/i1/TB1qZ3aHpXXXXbuXFXXXXXXXXXX_!!0-item_pic.jpg_80x80.jpg"
+  }]
+}

@@ -1,4 +1,5 @@
-html{height:100% !important}html body{height:100% !important}html body .main-wrapper{height:78%}
+html{height:100% !important}html body{height:100% !important}html body .main-wrapper{height:78%}html body .main-wrapper #J_nav .active{background:#e6e6e6;color:#333;padding-right:10px;border-right:4px solid #f23f40}
+html body .main-wrapper #J_nav li{padding:0}html body .main-wrapper #J_nav li a{padding-left:20px }
 .head,.main-inner,footer{width:1200px;margin:0 auto}
 header{background:#fff}
 .loading{display:block;margin:20px auto}
