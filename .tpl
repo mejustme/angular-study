@@ -17,7 +17,7 @@
             <ul class="userbar list-unstyled clearfix">
                 <li class="userinfo">
                     <a href="#">
-                        <span class="username"><i class="wsif wsif-profile"></i>影魔老师</span>
+                        <span class="username"><i class="wsif wsif-profile"></i>影魔</span>
                     </a>
                 </li>
 

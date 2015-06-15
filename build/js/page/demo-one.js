@@ -22,7 +22,7 @@ function routeConfig($routeProvider) {
 
 angularDemoApp.config(routeConfig);
 
-/*-------商品列表控制器--------*/
+/*-------商品列表控制器,必须显示声明依赖，因为压缩替换简化变量，导致运行错误--------*/
 angularDemoApp.controller('ListsController', ['$scope', '$http', function($scope, $http) {
     $scope.filter = {
         keyword : '',
@@ -65,8 +65,10 @@ angularDemoApp.controller('ContentController', ['$scope', '$http','$routeParams'
 angularDemoApp.filter('searchFilter', function () {
     var searchFilter = function (input, type, obj) {
         var result = []; // 害苦我，写成{}!
+        if(input === undefined){
+            input = [];
+        }
         switch(type) {
-
             case 'keyword':
                 $.each(input, function(){  //$.each()返回原数组
                     if(obj.keyword === '' || obj.keyword === undefined){
@@ -109,9 +111,32 @@ angularDemoApp.filter('toChinese', function() {
             judge : '审核中',
             sale : '销售中',
             off : '已下架'
-        }
+        };
         return  nameHash[input];
     };
     return convert;
 });
+
+
+/*-------自定义指令，改变nav导航栏点击背景-------*/
+angularDemoApp.directive('changeBkg', function() {
+    return {
+        link: function(scope, element) {
+            element.bind('click', function(event) {
+               $(this).parent().find("li").removeClass("active");
+               $(this).addClass("active");
+            })
+        }
+    };
+});
+
+/*-------自定义指令，inputs输入框，自动focus-------*/
+angularDemoApp.directive('autoFocus', function() {
+    return {
+        link: function(scope, element) {
+            element[0].focus();
+        }
+    };
+});
+
 },{}]},{},[1])
