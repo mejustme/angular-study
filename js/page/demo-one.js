@@ -47,8 +47,8 @@ angularDemoApp.controller('ContentController', ['$scope', '$http','$routeParams'
         function($scope, $http, $routeParams) {
             $http.get('../js/json/goods-list.json').success(function(data) {
                 if(data.status === 'success'){
-                     $.each(data.itemList, function(){
-                        if(this.id === $routeParams.id){
+                     $.each(data.itemList, function() {
+                        if(this.id === $routeParams.id) {
                             $scope.item = this;
                         }
                     });
