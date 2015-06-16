@@ -8,11 +8,11 @@ var angularDemoApp = angular.module('angularDemoApp', ['ngRoute']);
 function routeConfig($routeProvider) {
     $routeProvider.
         when('/list', {
-            templateUrl: 'goods-list.html',
+            templateUrl: 'demos/goods-list.html',
             controller: 'ListsController'
         }).
         when('/content/:id', {  //害苦了我，:id写上面去了
-            templateUrl: 'goods-content.html',
+            templateUrl: 'demos/goods-content.html',
             controller: 'ContentController'
         }).
         otherwise({
