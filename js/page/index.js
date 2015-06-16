@@ -31,7 +31,7 @@ angularDemoApp.controller('ListsController', ['$scope', '$http', function($scope
         state4 : '!off'
 
     };
-    $http.get('../js/json/goods-list.json').success(function(data) {
+    $http.get('js/json/goods-list.json').success(function(data) {
         if(data.status === 'success'){
             $scope.itemList = data.itemList;
         }else{
@@ -45,7 +45,7 @@ angularDemoApp.controller('ListsController', ['$scope', '$http', function($scope
 /*-------商品内容控制器--------*/
 angularDemoApp.controller('ContentController', ['$scope', '$http','$routeParams',
         function($scope, $http, $routeParams) {
-            $http.get('../js/json/goods-list.json').success(function(data) {
+            $http.get('js/json/goods-list.json').success(function(data) {
                 if(data.status === 'success'){
                      $.each(data.itemList, function() {
                         if(this.id === $routeParams.id) {
