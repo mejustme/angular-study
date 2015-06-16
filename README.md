@@ -12,7 +12,7 @@ homework/
 |               |-page //  最终生成的为压缩版本的css,页面级
 |               |-common.min.css //  通用压缩css
 |           |-demos  // html页面
-|
+|           |-index.html  // 首页页面
 |           |-js
 |               |-json // 模拟数据
 |               |-page  // 最终压缩合并的js, 页面级
