@@ -1,4 +1,4 @@
-# angular第一次作业
+# angular-路由器/过滤器/自定义指令
 
 ## 文件结构
 
@@ -24,6 +24,7 @@ homework/
 |       |-node_modules //  依赖的插件模块包
 |       |-.tpl //  生成页面的脚手架模板
 |       |-README.md /
+|-----index.html  // 首页页面
 |-----.gitignore // 默认使用git，配置好gitignore文件
 |-----Gruntfiles.js // grunt配置文件
 |-----package.json //g runt依赖包配置文件
