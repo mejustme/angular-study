@@ -12,18 +12,19 @@ homework/
 |               |-page //  最终生成的为压缩版本的css,页面级
 |               |-common.min.css //  通用压缩css
 |           |-demos  // html页面
-|           |-index.html  // 首页页面
 |           |-js
 |               |-json // 模拟数据
 |               |-page  // 最终压缩合并的js, 页面级
+|           |-index.html  // 首页页面
 |       |-demos  //html页面
 |       |-js     //未压缩的js, 页面级
 |       |-less     //未编译的less
 |           |-mod  //模块化的less
-|           |-page //页面级的less
+|           |-page  //页面级的less
 |       |-node_modules //  依赖的插件模块包
-|       |-.tpl //  生成页面的脚手架模板
-|       |-README.md /
+|-------index.html //  index.html  // 首页页面
+|-------.tpl    //  生成页面的脚手架模板
+|-------README.md
 |-----.gitignore // 默认使用git，配置好gitignore文件
 |-----Gruntfiles.js // grunt配置文件
 |-----package.json //g runt依赖包配置文件
